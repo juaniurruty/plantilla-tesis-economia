@@ -1,0 +1,213 @@
+%###############################################################################
+% Plantilla de LaTeX no oficial de la Maestría en Economía - FCEA - UDELAR
+
+% Adaptado al formato aprobado por la Comisión Académica de la Maestría en 
+% Economía - FCEA - UDELAR
+
+% Elaborado por: Juan Ignacio Urruty
+
+% Inspirado en: 
+
+% 1) Plantilla no oficilar de Udelar creada por LaTeXUy. En particular, Jorge 
+% Pérez Zerpa (https://github.com/jorgepz), Mihdí Caballero 
+% (https://github.com/mihdicaballero) y https://github.com/MBerguer   
+
+% Pueden encontrar el repositorio original en: 
+% https://github.com/LaTeXUy/UdelaRTeX 
+
+% 2) Pautas de presentación y normalización de los Trabajos Académicos
+% Elaboradas por las Bibliotecólogas Rita Grisolia y Fabiana Delfino
+
+% Pueden encontrar el documento en el siguiente 
+% (https://fcea.udelar.edu.uy/images/micrositios/biblioteca/PDF/Pautas_para_Trabajos_Finales_Acad%C3%A9micos.pdf) 
+
+% 3) Plantilla de Word y LibreOffice creada por Sergio Palomeque
+
+% Recursos adicionales:
+
+% El estilo para las referencias bibliográficas en español fue realizada por 
+% https://github.com/SantiPlanet
+
+% Pueden encontrar el repositorio original en 
+% https://github.com/SantiPlanet/apalike
+
+%###############################################################################
+
+%###############################################################################
+% Preambulo - paquetes
+
+% Aca se pone el tamaño de la fuente y el tipo de documento
+\documentclass[12pt]{article}
+
+% Esto sirve para manejar las citas bibliograficas
+\usepackage[authoryear]{natbib}
+
+% Esto configura las citas bibliográficas y las referencias en el estilo APA en 
+% español. Le da un formato a lo que termina saliendo en la bibliografía y al 
+% usar los comandos de \citet \citep \citeauthor \citeyear, etc.
+\bibliographystyle{apalike-es.bst}
+
+% Esto define a la fuente del texto con una fuente similar a la times new roman. 
+% Además, pone que las expresiones matemáticas tengan esa misma fuente.
+\usepackage{times}
+\usepackage{mathptmx}
+
+% Esto es para que el documento se encuentre seteado en español, por ejemplo: 
+% hace aparecer la palabra "índice" la parte del índice en vez de la palabra 
+% "contents"
+\usepackage[spanish]{babel}
+
+% Paquetes que ayudan con las tablas e imágenes
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[labelfont=bf]{caption}
+\usepackage[shortlabels]{enumitem}
+
+% Esto pone en 5 el nivel de secciones que se incluyen en el índice
+% 0 capitulo, 1 sección, 2 subsección, 3 subsubsección, 4 párrafo, 5 subpárrafo
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+% Esto interactua con los comandos itemize, enumerate y description
+\usepackage[shortlabels]{enumitem}
+
+% Paquete que ayuda con las fórmulas matemáticas
+\usepackage{amsmath}
+
+% Esto es un paquete que le brinda unos nombres a los colores que se van a 
+% utilizar en links por ejemplo
+\usepackage[svgnames]{xcolor}
+
+% Este paquete hace que los links tengan un color y lo establece como azul 
+% oscuro (se puede cambiar) o quitar. Es recomendable dejar el paquete de 
+% hyperref de todas formas \usepackage{hyperref}
+\usepackage[colorlinks=true,allcolors=DarkBlue]{hyperref}
+
+% Paquete para poder cambiar los márgenes
+% Los márgenes establecidos por las pautas son de 2.5cm
+% No modificar
+\usepackage[a4paper]{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% Este paquete es para simplificar la vida con las citas con comillas hay que 
+% poner \say{} y el texto
+\usepackage{dirtytalk}
+
+% Esto es para modificar el interlineado.
+% En las primeras páginas se pondrá en 1.5. Para el cuerpo del archivo, en los
+% capítulos, se pondrá espaciado doble.
+\usepackage{setspace}
+\onehalfspacing
+
+% Se pueden agregar los paquetes adicionales que hagan falta para las
+% necesidades particulares de cada tesis de maestría
+
+%###############################################################################
+
+%###############################################################################
+% Comienzo del documento
+\begin{document}
+
+% Primera parte:
+% Caratulas e integrantes del tribunal. En esta parte no debería quitarse 
+% ninguna de las páginas, solamente modificar con los datos correspondientes: 
+% titulo, nombres, tutora, cotutora, directora académica, mes de entrega, año 
+% de entrega
+
+% Esto es para que no se le ponga número a estas páginas y que las mismas no 
+% aparezcan luego en el índice
+\pagestyle{empty}
+\pagenumbering{gobble}
+
+\input{01- titulos/1 - caratula}
+
+\input{01- titulos/2 - segunda caratula}
+
+\input{01- titulos/3- integrantes tribunal}
+
+% Segunda parte:
+% Dedicatoria (opcional), agradecimientos (opcional) y epígrafe (opcional). En 
+% esta parte se podrían comentar las siguientes tres 
+
+\input{02 - dedicatoria_agradecimientos_epigrafe/1 - dedicatoria}
+
+\input{02 - dedicatoria_agradecimientos_epigrafe/2 - agradecimientos}
+
+\input{02 - dedicatoria_agradecimientos_epigrafe/3 - epigrafe}
+
+% Tercera parte
+% Resumen, abstract e índice. En esta parte no debería quitarse % ninguna de las
+% páginas, solamente modificar con los datos correspondientes
+
+\input{03 - resumen_abstract_indice/1 - resumen}
+
+\input{03 - resumen_abstract_indice/2 - indice}
+
+% Cuarta parte:
+% Capítulos / Secciones de la tesis. Esto se puede editar a gusto, solamente se 
+% ponen sugerencias de cómo podrían ser los capítulos de la tesis
+
+% Esto es para que vuelvan a aparecer los números de las páginas y aparezcan en
+% el índice del documento
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+% Se indica que el espaciado será doble
+\doublespacing
+
+% Se pueden agregar y quitar secciones
+\section{Introducción}
+\input{04 - capítulos/1 - introduccion}
+
+\section{Antecedentes}
+\input{04 - capítulos/2 - antecedentes}
+
+\section{Marco teórico}
+\input{04 - capítulos/3 - marco teorico}
+
+\section{Estrategia empírica}
+\input{04 - capítulos/4 - estrategia empirica}
+
+\section{Resultados}
+\input{04 - capítulos/5 - resultados}
+
+\section{Reflexiones finales / Conclusiones}
+\input{04 - capítulos/6 - reflexiones finales}
+
+
+% Quinta parte:
+% Bibliografía / Referencias. Estas líneas crean una sección de referencias y
+% que aparezca dentro del índice
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{section}{Referencias}
+
+% En este punto se especifica cuál es el archivo .bib que contiene toda la
+% la bibliografía que se utiliza en la tesis
+\bibliography{Bibliography}
+
+% En caso de no querer usar el paquete natbib y el archivo .bib, se puede crear 
+% la bibliografia a mano. En ese caso se podría hacer lo siguiente:
+
+% \section{Referencias / Bibliografia} o \section*{Referencias / Bibliografia}
+
+% Crear un nuevo archivo .tex en donde poner la bibliografía o incorporarla 
+% abajo de aca. En caso de querer crear un archivo, podria ubicarse en la misma 
+% direccion que main.tex entonces se pondria
+
+% \input{bibliografia.tex}
+
+\newpage
+
+
+% Sexta parte: 
+% Anexos. En caso de que no hayan anexos, se pueden comentar las lineas que
+% vienen a continuación. Se pueden agregar más anexos si hacen faltas
+\appendix
+\section{Anexo}
+\input{05 - anexos/1 - primer anexo}
+
+\input{05 - anexos/2 - segundo anexo}
+
+\end{document}

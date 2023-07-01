@@ -1,0 +1,58 @@
+% Esta línea es para que las notas al pie aparezcan con asteriscos en vez de
+% números. Luego más adelante en el capítulo introductorio se vuelven a poner
+% en formato de números y se reinicia el conteo de notas al pie.
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{center}
+
+\normalsize Evaluación del impacto del título de la tesis: una mirada desde la plantilla de \LaTeX
+
+\vspace{6mm}
+
+\small Nombre y apellido de la autora\footnote{(Opcional) Institución de la autora, Email:}
+    
+\end{center}
+
+\vspace{1.5mm}
+
+
+% Esta linea es para que el comando \begin{abstract} ponga un título
+% personalizado
+\renewcommand{\abstractname}{Resumen}
+\begin{abstract}
+
+% Reemplazar con el texto del resumen después del \footnotesize
+\footnotesize \noindent  El resumen debe seguir el estilo que generalmente se encuentra en los papers académicos, donde se mencionan los objetivos, metodologías y resultados principales del trabajo. Este apartado debe dar una idea rápida al lector acerca de lo que trata el trabajo, para que este pueda decidir si se ajusta a sus intereses para seguir leyendo.
+
+\vspace{3mm}
+
+\noindent Palabras clave: Separado por (;) se indican 4 o 5 términos fundamentales del trabajo. Ej: Metodologías de Análisis; Componentes del Marco Teórico; Fenómeno Estudiado. 
+
+\vspace{1.5mm}
+
+\noindent Opcional - Clasificación JEL: Separados por (,) los códigos que permitan clasificar el trabajo. Estos pueden ser encontrados en: \href{https://es.wikipedia.org/wiki/Códigos_de_clasificación_JEL}{Códigos de clasificación JEL - Wikipedia}
+
+\end{abstract}
+
+\vspace{3mm}
+
+% Esta linea es para que el comando \begin{abstract} ponga un título
+% personalizado
+\renewcommand{\abstractname}{Abstract}
+\begin{abstract}
+
+% Reemplazar con el texto del resumen después del \footnotesize
+\footnotesize \noindent The abstract must follow the style that is generally found in academic papers, where the objectives, methodologies and main results of the work are mentioned. This section should give the reader a quick idea about what the work is about, so that they can decide if it fits their interests to continue reading.
+
+\vspace{3mm}
+
+\noindent Keywords: Separated by (;) 4 or 5 fundamental concepts of the work are indicated. For example: Analysis Methodologies; Components of the Theoretical Framework; Phenomenon Studied
+
+\vspace{1.5mm}
+
+\noindent Optional - JEL Classification: Separated by (,) the codes that allow classifying the work. These can be found at: \href{https://en.wikipedia.org/wiki/JEL_classification_codes}{JEL classification codes - Wikipedia}
+
+\end{abstract}
+
+% Salto de página
+\newpage
