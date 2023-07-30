@@ -9,7 +9,7 @@ Agradecimientos
 
 Les agradezco a todas las personas que han utilizado esta plantilla y/o me
 brindaron comentarios para mejorarlas. En particular, quería destacar los
-comentarios de Mauricio Suárez y Estefanía Galván.
+comentarios de Mauricio Suárez, Estefanía Galván y Rodrigo Ceni.
 
 Objetivo
 
