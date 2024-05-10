@@ -11,6 +11,9 @@ Les agradezco a todas las personas que han utilizado esta plantilla y/o me
 brindaron comentarios para mejorarlas. En particular, quería destacar los
 comentarios de Mauricio Suárez, Estefanía Galván y Rodrigo Ceni.
 
+En particular, quería agradecer a Lucía Bertoletti, quién me sugirió que
+creara la plantilla para dejarla disponible a los estudiantes.
+
 ## Objetivo
 
 El objetivo es brindar una plantilla con un formato estándar básico para las
